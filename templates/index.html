@@ -25,12 +25,18 @@
     </div>
     <div class="page-shell">
       <header class="site-header" aria-label="Cabecalho">
+        <input class="menu-state" type="checkbox" id="menu-state" aria-hidden="true" />
         <a class="brand" href="#top" aria-label="Agbara IA">
           <span class="brand-mark" aria-hidden="true">
             <img src="{{ url_for('static', filename='img/agbara-logo-cutout-720.webp') }}" alt="" />
           </span>
           <span class="brand-word"><span>Agbara</span><span>IA</span></span>
         </a>
+        <label class="menu-toggle" for="menu-state" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
         <nav class="nav-links" aria-label="Principal">
           <a href="#produto">Produto</a>
           <a href="#automacao">Automacao</a>
