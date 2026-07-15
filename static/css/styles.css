@@ -1862,3 +1862,365 @@ h1 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Elegant responsive refinement */
+.page-shell {
+  width: min(1160px, calc(100% - 44px));
+}
+
+.site-header {
+  gap: 16px;
+  min-height: 70px;
+  padding: 10px 12px;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+}
+
+.brand-mark img {
+  width: 66px;
+  height: 54px;
+}
+
+.brand-word {
+  max-width: none;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1;
+}
+
+.header-cta,
+.primary-button,
+.secondary-button,
+.lead-form button {
+  min-height: 44px;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(28px, 4vw, 48px);
+  min-height: auto;
+  padding: clamp(46px, 7vw, 72px) 0 clamp(42px, 6vw, 64px);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-badge {
+  max-width: 100%;
+  font-size: clamp(0.72rem, 1.4vw, 0.82rem);
+  line-height: 1.25;
+}
+
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.08em;
+  align-items: baseline;
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 18px;
+  padding-right: 0;
+  overflow: visible;
+  font-size: clamp(3.7rem, 8.4vw, 7.7rem);
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+h1 span {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  text-wrap: pretty;
+}
+
+h2 {
+  max-width: 980px;
+  font-size: clamp(1.86rem, 4vw, 3.75rem);
+  text-wrap: balance;
+}
+
+h3,
+p,
+.bubble,
+.step strong,
+.metric span,
+.feature-card p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero-stage {
+  min-width: 0;
+  min-height: 610px;
+}
+
+.hero-logo {
+  width: min(88%, 560px);
+  opacity: 0.35;
+}
+
+.product-console {
+  width: min(100%, 540px);
+}
+
+.insight-card {
+  max-width: min(42vw, 172px);
+}
+
+.proof-strip,
+.hero-signals {
+  max-width: 650px;
+}
+
+.proof-strip span {
+  flex: 1 1 180px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-card {
+  min-width: 0;
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form button {
+  min-width: 0;
+}
+
+@media (max-width: 1120px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    max-width: 840px;
+  }
+
+  .hero-stage {
+    width: min(100%, 720px);
+    justify-self: center;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .page-shell {
+    width: min(100% - 28px, 680px);
+  }
+
+  .site-header {
+    position: static;
+    align-items: center;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 2px 0 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 240, 169, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(3.25rem, 15vw, 6.1rem);
+  }
+
+  .hero-stage {
+    min-height: 620px;
+  }
+
+  .hero-logo {
+    width: min(100%, 500px);
+    opacity: 0.32;
+  }
+
+  .product-console {
+    margin-top: 128px;
+  }
+
+  .intro-band,
+  .automation,
+  .market,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-shell {
+    width: min(100% - 20px, 520px);
+  }
+
+  .site-header {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-mark img {
+    width: 58px;
+    height: 46px;
+  }
+
+  .brand-word {
+    font-size: 0.98rem;
+  }
+
+  .header-cta {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 40px;
+    padding-inline: 12px;
+    font-size: 0.82rem;
+  }
+
+  .hero-badge {
+    display: grid;
+    grid-template-columns: 9px minmax(0, 1fr);
+    align-items: center;
+    border-radius: var(--radius);
+  }
+
+  h1 {
+    gap: 0.06em;
+    font-size: clamp(3rem, 18vw, 5rem);
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+
+  .proof-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stage {
+    min-height: 590px;
+    margin-inline: 0;
+  }
+
+  .hero-logo {
+    width: 108%;
+    opacity: 0.28;
+  }
+
+  .product-console {
+    margin-top: 122px;
+  }
+
+  .flow-rail {
+    grid-template-columns: repeat(4, max-content);
+  }
+
+  .flow-rail span {
+    white-space: nowrap;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .lead-form {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .feature-icon {
+    margin-bottom: 34px;
+  }
+
+  .metric {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding: 9px;
+  }
+
+  .brand-word {
+    font-size: 0.94rem;
+  }
+
+  .header-cta {
+    padding-inline: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.72rem, 17vw, 4.15rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .hero-stage {
+    min-height: 560px;
+  }
+
+  .product-console {
+    margin-top: 112px;
+  }
+
+  .bubble {
+    max-width: 100%;
+  }
+
+  .insight-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .insight-card-b {
+    margin-top: 8px;
+  }
+}
