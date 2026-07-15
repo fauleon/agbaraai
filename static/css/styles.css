@@ -2344,13 +2344,15 @@ p,
   }
 
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
     gap: 12px;
     padding: 14px;
+    justify-items: center;
   }
 
   .brand {
-    justify-content: flex-start;
+    grid-column: 2;
+    justify-content: center;
   }
 
   .brand-mark {
@@ -2373,6 +2375,8 @@ p,
 
   .menu-toggle {
     display: grid;
+    grid-column: 3;
+    grid-row: 1;
     width: 46px;
     height: 46px;
     align-content: center;
@@ -2396,6 +2400,7 @@ p,
     grid-column: 1 / -1;
     justify-self: stretch;
     width: 100%;
+    margin-top: 8px;
   }
 
   .nav-links {
@@ -2448,6 +2453,26 @@ p,
     padding-top: 86px;
   }
 
+  .subtle-lasso {
+    display: block;
+    top: 14px;
+    left: 4px;
+    width: 150px;
+    height: 66px;
+    opacity: 0.16;
+    transform: rotate(-20deg);
+  }
+
+  .subtle-arrow {
+    display: block;
+    right: 8px;
+    bottom: auto;
+    top: 70px;
+    width: 130px;
+    opacity: 0.18;
+    transform: rotate(-18deg);
+  }
+
   .hero-logo {
     width: min(104%, 390px);
     opacity: 0.22;
@@ -2492,13 +2517,17 @@ p,
   }
 
   .brand-mark {
-    width: 68px;
+    width: 64px;
     height: 54px;
   }
 
   .brand-mark img {
-    width: 84px;
+    width: 80px;
     height: 58px;
+  }
+
+  .brand-word {
+    font-size: 0.98rem;
   }
 
   h1 {
