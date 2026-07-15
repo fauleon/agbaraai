@@ -1915,23 +1915,22 @@ h1 {
 }
 
 h1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.08em;
-  align-items: baseline;
+  display: block;
   width: 100%;
   max-width: 760px;
   margin-bottom: 18px;
   padding-right: 0;
   overflow: visible;
-  font-size: clamp(3.7rem, 8.4vw, 7.7rem);
+  font-size: clamp(3.35rem, 7.6vw, 7.2rem);
   line-height: 0.96;
+  white-space: nowrap;
   text-wrap: balance;
 }
 
 h1 span {
   display: inline-block;
   max-width: 100%;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -2058,7 +2057,7 @@ p,
 
   h1 {
     max-width: 100%;
-    font-size: clamp(3.25rem, 15vw, 6.1rem);
+    font-size: clamp(3rem, 12vw, 5.6rem);
   }
 
   .hero-stage {
@@ -2121,8 +2120,7 @@ p,
   }
 
   h1 {
-    gap: 0.06em;
-    font-size: clamp(3rem, 18vw, 5rem);
+    font-size: clamp(2.72rem, 14vw, 4.55rem);
   }
 
   .hero-actions {
@@ -2196,7 +2194,7 @@ p,
   }
 
   h1 {
-    font-size: clamp(2.72rem, 17vw, 4.15rem);
+    font-size: clamp(2.32rem, 13.2vw, 3.45rem);
   }
 
   .hero-subtitle {
