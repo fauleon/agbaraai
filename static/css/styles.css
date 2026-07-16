@@ -1389,6 +1389,31 @@ h1 {
   font-weight: 800;
 }
 
+.starter-callout {
+  display: grid;
+  gap: 6px;
+  max-width: 650px;
+  margin-top: 18px;
+  padding: 16px;
+  color: #fff2bd;
+  border: 1px solid rgba(255, 240, 169, 0.22);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(242, 193, 78, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(8, 8, 6, 0.55);
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(14px);
+  font-weight: 800;
+}
+
+.starter-callout span {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .hero-logo {
   animation: logo-float 7s ease-in-out infinite;
 }
@@ -1588,6 +1613,192 @@ h1 {
   background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
   transform: rotate(16deg);
   animation: panel-scan 6s ease-in-out infinite;
+}
+
+.plans {
+  position: relative;
+  margin: 36px 0;
+  padding-top: 88px;
+  border-top: 1px solid var(--line);
+}
+
+.plans-heading {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 34px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.plans-heading p:last-child {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.plan-card {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-height: 460px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(255, 240, 169, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(10, 9, 7, 0.72);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+}
+
+.plan-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.5;
+  background: radial-gradient(circle at 20% 0%, rgba(242, 193, 78, 0.17), transparent 34%);
+}
+
+.plan-card > * {
+  position: relative;
+}
+
+.plan-kicker {
+  width: fit-content;
+  padding: 7px 10px;
+  color: var(--gold-2);
+  border: 1px solid rgba(255, 240, 169, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.plan-card h3 {
+  margin-bottom: 0;
+  color: var(--gold-2);
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+}
+
+.plan-summary,
+.plan-card li {
+  color: var(--muted);
+}
+
+.plan-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-card li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.plan-card li::before {
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 16px rgba(242, 193, 78, 0.42);
+}
+
+.plan-card a,
+.custom-plan a,
+.whatsapp-panel a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0 16px;
+  color: #100c04;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #8e5410, var(--gold), var(--gold-2), #bd7919);
+  box-shadow: 0 18px 42px rgba(242, 193, 78, 0.18);
+  font-weight: 900;
+  text-align: center;
+}
+
+.featured-plan {
+  border-color: rgba(255, 240, 169, 0.38);
+  background:
+    linear-gradient(145deg, rgba(242, 193, 78, 0.18), rgba(255, 255, 255, 0.035)),
+    rgba(12, 10, 7, 0.76);
+}
+
+.premium-plan {
+  background:
+    linear-gradient(145deg, rgba(255, 240, 169, 0.1), rgba(141, 91, 20, 0.12)),
+    rgba(10, 9, 7, 0.72);
+}
+
+.custom-plan {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 240, 169, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(12px);
+}
+
+.custom-plan strong {
+  color: var(--gold-2);
+}
+
+.custom-plan span {
+  color: var(--muted);
+}
+
+.whatsapp-panel {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid rgba(255, 240, 169, 0.28);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(242, 193, 78, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(8, 8, 6, 0.72);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+}
+
+.whatsapp-panel span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.whatsapp-panel strong {
+  color: var(--gold-2);
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1;
+}
+
+.whatsapp-panel p {
+  color: var(--muted);
 }
 
 @keyframes logo-float {
@@ -2255,7 +2466,7 @@ p,
 
   .nav-links {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     overflow: visible;
   }
 
@@ -2415,7 +2626,7 @@ p,
   }
 
   .menu-state:checked ~ .nav-links {
-    max-height: 140px;
+    max-height: 210px;
     padding-top: 4px;
     opacity: 1;
   }
@@ -2430,6 +2641,10 @@ p,
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .nav-links a:last-child {
+    grid-column: 1 / -1;
   }
 
   .hero {
@@ -2508,6 +2723,28 @@ p,
   .insight-card {
     width: 100%;
     margin-left: 0;
+  }
+
+  .plans {
+    padding-top: 64px;
+  }
+
+  .plans-heading,
+  .plans-grid,
+  .custom-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    min-height: auto;
+  }
+
+  .custom-plan a {
+    width: 100%;
+  }
+
+  .whatsapp-panel {
+    padding: 20px;
   }
 }
 

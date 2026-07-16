@@ -40,10 +40,11 @@
         <nav class="nav-links" aria-label="Principal">
           <a href="#produto">Produto</a>
           <a href="#automacao">Automacao</a>
+          <a href="#planos">Planos</a>
           <a href="#mercado">Mercado</a>
           <a href="#contato">Contato</a>
         </nav>
-        <a class="header-cta" href="#contato">Solicitar demo</a>
+        <a class="header-cta" href="https://wa.me/5511966325699?text=Ola%2C%20quero%20conhecer%20a%20Agbara%20IA%20e%20entender%20os%20planos." target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </header>
 
       <main id="top">
@@ -59,9 +60,13 @@
               atendimento em receita e dados soltos em decisoes acionaveis.
             </p>
             <div class="hero-actions">
-              <a class="primary-button" href="#contato">Criar meu chatbot</a>
+              <a class="primary-button" href="https://wa.me/5511966325699?text=Ola%2C%20quero%20comecar%20pelo%20Plano%20Basico%20da%20Agbara%20IA." target="_blank" rel="noopener">Comecar pelo basico</a>
               <a class="secondary-button" href="#produto">Conhecer plataforma</a>
             </div>
+            <a class="starter-callout" href="https://wa.me/5511966325699?text=Ola%2C%20quero%20montar%20meu%20primeiro%20chatbot%20com%20a%20Agbara%20IA." target="_blank" rel="noopener">
+              <span>Entrada recomendada</span>
+              Plano Basico para montar seu primeiro chatbot e evoluir para integracoes quando fizer sentido.
+            </a>
             <div class="proof-strip" aria-label="Indicadores">
               <span><strong>24/7</strong> atendimento ativo</span>
               <span><strong>3x</strong> resposta mais rapida</span>
@@ -213,6 +218,57 @@
           </div>
         </section>
 
+        <section class="plans" id="planos" aria-labelledby="plans-title">
+          <div class="plans-heading">
+            <p class="eyebrow">Planos</p>
+            <h2 id="plans-title">Comece simples, evolua com integracoes e escale com CRM.</h2>
+            <p>
+              O Plano Basico coloca sua operacao no ar com uma experiencia profissional. Depois, quando o
+              funil pedir mais automacao, voce avanca para integracoes e sistemas conectados.
+            </p>
+          </div>
+          <div class="plans-grid" aria-label="Planos Agbara IA">
+            <article class="plan-card featured-plan">
+              <span class="plan-kicker">Mais indicado para comecar</span>
+              <h3>Basico</h3>
+              <p class="plan-summary">Montagem do chatbot com roteiro, visual e fluxo principal de atendimento.</p>
+              <ul>
+                <li>Estrutura inicial da conversa</li>
+                <li>Captura de contato e objetivo</li>
+                <li>Direcionamento para WhatsApp</li>
+              </ul>
+              <a href="https://wa.me/5511966325699?text=Ola%2C%20quero%20o%20Plano%20Basico%20da%20Agbara%20IA." target="_blank" rel="noopener">Quero comecar por aqui</a>
+            </article>
+            <article class="plan-card">
+              <span class="plan-kicker">Automacao inicial</span>
+              <h3>Integrado</h3>
+              <p class="plan-summary">Conecta o chatbot com ate 2 aplicativos, como Google Agenda e outra ferramenta.</p>
+              <ul>
+                <li>Agendamento automatizado</li>
+                <li>Envio de dados para aplicativo</li>
+                <li>Fluxos com regras de encaminhamento</li>
+              </ul>
+              <a href="https://wa.me/5511966325699?text=Ola%2C%20quero%20entender%20o%20Plano%20Integrado%20da%20Agbara%20IA." target="_blank" rel="noopener">Entender integracoes</a>
+            </article>
+            <article class="plan-card premium-plan">
+              <span class="plan-kicker">Operacao completa</span>
+              <h3>Premium</h3>
+              <p class="plan-summary">Integra com aplicacoes, CRM e processos mais avancados para operacoes comerciais.</p>
+              <ul>
+                <li>CRM e pipeline comercial</li>
+                <li>Aplicacoes e sistemas internos</li>
+                <li>Fluxos sob medida para escala</li>
+              </ul>
+              <a href="https://wa.me/5511966325699?text=Ola%2C%20quero%20conversar%20sobre%20o%20Plano%20Premium%20da%20Agbara%20IA." target="_blank" rel="noopener">Falar sobre Premium</a>
+            </article>
+          </div>
+          <div class="custom-plan">
+            <strong>Precisa de algo alem dos planos?</strong>
+            <span>Chame no WhatsApp e explique seu portfolio, rotina ou stack. A gente desenha o caminho ideal.</span>
+            <a href="https://wa.me/5511966325699?text=Ola%2C%20quero%20explicar%20meu%20portfolio%20e%20ver%20uma%20solucao%20sob%20medida%20com%20a%20Agbara%20IA." target="_blank" rel="noopener">Conversar no WhatsApp</a>
+          </div>
+        </section>
+
         <section class="market" id="mercado" aria-labelledby="market-title">
           <div class="section-arrow" aria-hidden="true"><span></span></div>
           <div class="metric">
@@ -233,36 +289,18 @@
         <section class="contact" id="contato" aria-labelledby="contact-title">
           <div>
             <p class="eyebrow">Contato</p>
-            <h2 id="contact-title">Vamos colocar a Agbara IA para conversar pela sua empresa.</h2>
+            <h2 id="contact-title">Me chama no WhatsApp e explica seu portfolio.</h2>
             <p>
-              Solicite uma demonstracao e veja como a experiencia pode se adaptar ao seu funil.
+              Conte o que voce vende, como atende hoje e quais sistemas usa. A Agbara IA pode comecar
+              simples no plano Basico e evoluir para integracoes quando o projeto pedir.
             </p>
-            {% if lead_sent %}
-              <div class="success-message" role="status">
-                Recebido, {{ lead.name or "tudo certo" }}. Seu interesse em {{ lead.goal or "Agbara IA" }} foi registrado.
-              </div>
-            {% endif %}
           </div>
-          <form class="lead-form" action="{{ url_for('lead') }}" method="post">
-            <label>
-              Nome
-              <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required />
-            </label>
-            <label>
-              WhatsApp
-              <input type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel" required />
-            </label>
-            <label>
-              Objetivo
-              <select name="goal" required>
-                <option>Captar leads</option>
-                <option>Automatizar atendimento</option>
-                <option>Vender pelo WhatsApp</option>
-                <option>Integrar com meu CRM</option>
-              </select>
-            </label>
-            <button type="submit">Solicitar demonstracao</button>
-          </form>
+          <div class="whatsapp-panel">
+            <span>WhatsApp direto</span>
+            <strong>11 96632-5699</strong>
+            <p>Explique seu portfolio, sua rotina comercial e o que voce quer automatizar primeiro.</p>
+            <a href="https://wa.me/5511966325699?text=Ola%2C%20quero%20explicar%20meu%20portfolio%20e%20conhecer%20a%20Agbara%20IA." target="_blank" rel="noopener">Entrar em contato</a>
+          </div>
         </section>
       </main>
     </div>
