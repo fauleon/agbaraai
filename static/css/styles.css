@@ -1771,9 +1771,11 @@ h1 {
 }
 
 .whatsapp-panel {
+  position: relative;
   display: grid;
   gap: 14px;
   padding: 24px;
+  overflow: hidden;
   border: 1px solid rgba(255, 240, 169, 0.28);
   border-radius: var(--radius);
   background:
@@ -1781,6 +1783,22 @@ h1 {
     rgba(8, 8, 6, 0.72);
   box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(12px);
+}
+
+.whatsapp-panel::before {
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 260px;
+  height: 260px;
+  content: "";
+  opacity: 0.22;
+  border: 1px solid rgba(255, 240, 169, 0.22);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 193, 78, 0.24), transparent 62%);
+}
+
+.whatsapp-panel > * {
+  position: relative;
 }
 
 .whatsapp-panel span {
@@ -1793,12 +1811,19 @@ h1 {
 
 .whatsapp-panel strong {
   color: var(--gold-2);
-  font-size: clamp(2rem, 5vw, 3.7rem);
-  line-height: 1;
+  max-width: 620px;
+  font-size: clamp(1.8rem, 4vw, 3.25rem);
+  line-height: 1.02;
+  text-wrap: balance;
 }
 
 .whatsapp-panel p {
   color: var(--muted);
+}
+
+.whatsapp-panel a {
+  width: fit-content;
+  min-width: 220px;
 }
 
 @keyframes logo-float {
@@ -2745,6 +2770,10 @@ p,
 
   .whatsapp-panel {
     padding: 20px;
+  }
+
+  .whatsapp-panel a {
+    width: 100%;
   }
 }
 
