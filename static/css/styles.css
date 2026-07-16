@@ -585,6 +585,38 @@ h3 {
   color: var(--muted);
 }
 
+.audience {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: start;
+  margin: 36px 0;
+  padding-top: 72px;
+  border-top: 1px solid var(--line);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.audience-grid span {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  padding: 14px;
+  color: var(--gold-2);
+  border: 1px solid rgba(255, 240, 169, 0.18);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(242, 193, 78, 0.09), rgba(255, 255, 255, 0.025)),
+    rgba(10, 9, 7, 0.72);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  font-weight: 900;
+  text-align: center;
+}
+
 .automation {
   display: grid;
   grid-template-columns: 0.86fr 1.14fr;
@@ -596,6 +628,57 @@ h3 {
 .pipeline {
   display: grid;
   gap: 12px;
+}
+
+.flow-map {
+  display: grid;
+  gap: 10px;
+}
+
+.flow-step {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-height: 72px;
+  align-content: center;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, rgba(242, 193, 78, 0.1), rgba(255, 255, 255, 0.028));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+
+.flow-step::after {
+  position: absolute;
+  left: 26px;
+  bottom: -10px;
+  width: 2px;
+  height: 10px;
+  content: "";
+  background: rgba(255, 240, 169, 0.28);
+}
+
+.flow-step:last-child::after {
+  display: none;
+}
+
+.flow-step span {
+  color: var(--gold-2);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.flow-step p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.question-step {
+  border-color: rgba(255, 240, 169, 0.3);
+}
+
+.sale-step {
+  background: linear-gradient(135deg, rgba(242, 193, 78, 0.24), rgba(255, 255, 255, 0.04));
 }
 
 .step {
@@ -727,6 +810,7 @@ h3 {
 @media (max-width: 1040px) {
   .hero,
   .intro-band,
+  .audience,
   .automation,
   .market,
   .contact {
@@ -2756,8 +2840,17 @@ p,
 
   .plans-heading,
   .plans-grid,
+  .audience,
   .custom-plan {
     grid-template-columns: 1fr;
+  }
+
+  .audience {
+    padding-top: 58px;
+  }
+
+  .audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .plan-card {
@@ -2814,5 +2907,13 @@ p,
   .flow-rail span,
   .quick-actions button {
     font-size: 0.78rem;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-step {
+    padding: 16px;
   }
 }
