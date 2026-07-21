@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from newrelic_logs import configure_new_relic_logs
 
 
 app = Flask(__name__)
+configure_new_relic_logs("agbara")
 
 
 @app.get("/")
